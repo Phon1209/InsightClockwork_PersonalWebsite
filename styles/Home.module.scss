@@ -11,13 +11,13 @@
     height: 100%;
 
     &.--index-2 {
-      background-color: pink;
+      @apply bg-pink-50;
     } 
     &.--index-3 {
-      background-color: red;
+      @apply bg-red-100;
     } 
     &.--index-4 {
-      background-color: white;
+      @apply bg-blue-200;
     } 
 
     & > h1 {
