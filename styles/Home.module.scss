@@ -1,0 +1,28 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: block mandatory;
+  scroll-behavior: smooth;
+
+  & > section {
+    scroll-snap-align: start;
+    height: 100%;
+
+    &.--index-2 {
+      background-color: pink;
+    } 
+    &.--index-3 {
+      background-color: red;
+    } 
+    &.--index-4 {
+      background-color: white;
+    } 
+
+    & > h1 {
+      font-size: 2rem;
+      text-shadow: 0 0 5px #333;
+    }
+  }
+}
