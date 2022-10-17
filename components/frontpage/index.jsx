@@ -1,4 +1,5 @@
 import React from "react";
+import BubbleImg from "./bubble/bubble_img";
 
 const Frontpage = () => {
   return (
@@ -8,7 +9,7 @@ const Frontpage = () => {
         <h3 className="text-headline-sm">Frontend Developer</h3>
       </section>
       <section className="flex-grow flex justify-center items-center">
-        <h3 className="text-display-md text-orange-400">Portfolio</h3>
+        <BubbleImg size={300} onPage={false} />
       </section>
     </div>
   );
