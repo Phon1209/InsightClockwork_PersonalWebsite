@@ -1,8 +1,11 @@
 import React from "react";
 
-function Bubble({ size }) {
+function Bubble({ size, x, y }) {
   return (
-    <div>
+    <div
+      className="absolute"
+      style={{ top: x, left: y, transform: `scale(${size / 145})` }}
+    >
       <svg
         width="145"
         height="145"
