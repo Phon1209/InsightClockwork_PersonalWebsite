@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Frontpage from "../components/frontpage";
 import Bubble from "../components/frontpage/bubble/bubble";
+
 export default function Home() {
   return (
     <>
