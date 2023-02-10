@@ -1,8 +1,17 @@
 import React from "react";
+import bubbleStyle from "../../styles/bubble.module.scss";
 
-function Bubble({ size }) {
+function Bubble({ size, x, y }) {
+  const desiredSize = size || 145;
   return (
-    <div>
+    <div
+      className={bubbleStyle.bubble}
+      style={{
+        transform: `scale(${desiredSize / 145})`,
+        top: y,
+        left: x,
+      }}
+    >
       <svg
         width="145"
         height="145"
@@ -10,12 +19,12 @@ function Bubble({ size }) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_135_388)">
+        <g clipPath="url(#clip0_135_388)">
           <g filter="url(#filter0_if_135_388)">
-            <circle cx="62" cy="49" r="44" fill="" fill-opacity="0.01" />
+            <circle cx="62" cy="49" r="44" fill="" fillOpacity="0.01" />
           </g>
           <g filter="url(#filter1_if_135_388)">
-            <circle cx="73" cy="73" r="68" fill="" fill-opacity="0.01" />
+            <circle cx="73" cy="73" r="68" fill="" fillOpacity="0.01" />
           </g>
           <g filter="url(#filter2_f_135_388)">
             <path
@@ -29,7 +38,7 @@ function Bubble({ size }) {
               cy="72.5"
               r="72.5"
               fill="black"
-              fill-opacity="0.01"
+              fillOpacity="0.01"
             />
           </g>
           <circle
@@ -37,8 +46,8 @@ function Bubble({ size }) {
             cy="72.5"
             r="72.25"
             stroke="white"
-            stroke-opacity="0.1"
-            stroke-width="0.5"
+            strokeOpacity="0.1"
+            strokeWidth="0.5"
           />
           <g filter="url(#filter4_f_135_388)">
             <circle cx="78.5" cy="131.5" r="3.5" fill="#EEEEEE" />
@@ -55,9 +64,9 @@ function Bubble({ size }) {
             width="104"
             height="104"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -99,9 +108,9 @@ function Bubble({ size }) {
             width="152"
             height="152"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -144,9 +153,9 @@ function Bubble({ size }) {
             width="39.9432"
             height="37.8198"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -165,9 +174,9 @@ function Bubble({ size }) {
             width="147"
             height="145"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -200,9 +209,9 @@ function Bubble({ size }) {
             width="9"
             height="9"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -221,9 +230,9 @@ function Bubble({ size }) {
             width="15"
             height="15"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
