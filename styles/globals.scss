@@ -2,29 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.fullpage-container {
-  height: 100vh;
-  height: 100dvh;
-  width: 100vw;
-  width: 100dvw;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  scroll-snap-type: block mandatory;
-  @apply bg-dark-black;
-  box-shadow: inset 0px 100px 190px rgba(255, 255, 255, 0.25),
-    inset 0px -20px 128px #000000;
-  position: relative;
-
-  > .fullpage-item {
-    height: 100vh;
-    width: 100vw;
-    scroll-snap-align: start;
-    overflow-y: hidden;
-    position: relative;
-  }
-}
-
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -34,8 +11,26 @@
   display: none;
 }
 
-// Typography
 @layer utilities {
+  // Container
+  .fullpage-container {
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-width: 100vw;
+    min-width: 100dvw;
+    @apply bg-dark-black;
+    box-shadow: inset 0px 100px 190px rgba(255, 255, 255, 0.25),
+      inset 0px -20px 128px #000000;
+    position: relative;
+
+    > .fullpage-item {
+      height: 100vh;
+      height: 100dvh;
+      overflow-y: auto;
+    }
+  }
+
+  // Typography
   .text {
     font-family: "Inter";
     font-style: normal;
