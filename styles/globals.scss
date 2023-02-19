@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Inter";
+  font-style: normal;
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -32,9 +37,6 @@
 
   // Typography
   .text {
-    font-family: "Inter";
-    font-style: normal;
-
     &-display {
       &-lg {
         font-weight: 700;
@@ -56,33 +58,37 @@
     }
 
     &-headline {
-      @apply font-normal;
       &-lg {
+        @apply font-normal;
         font-size: 32px;
         line-height: 40px;
       }
       &-md {
+        @apply font-normal;
         font-size: 28px;
         line-height: 36px;
       }
       &-sm {
+        @apply font-normal;
         font-size: 24px;
         line-height: 32px;
       }
     }
 
     &-title {
-      @apply font-medium;
       &-lg {
+        @apply font-medium;
         font-size: 22px;
         line-height: 28px;
       }
       &-md {
+        @apply font-medium;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.1px;
       }
       &-sm {
+        @apply font-medium;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.1px;
@@ -90,18 +96,20 @@
     }
 
     &-button {
-      @apply font-medium;
       &-lg {
+        @apply font-semibold;
         font-size: 14px;
         line-height: 16px;
         letter-spacing: 1.25px;
       }
       &-md {
+        @apply font-semibold;
         font-size: 12px;
         line-height: 16px;
         letter-spacing: 1px;
       }
       &-sm {
+        @apply font-semibold;
         font-size: 11px;
         line-height: 16px;
         letter-spacing: 1px;
