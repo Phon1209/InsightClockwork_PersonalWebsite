@@ -1,5 +1,13 @@
 .bubble {
-  position: absolute;
-  top: 0;
-  left: 0;
+  animation: UpDown 5s alternate infinite ease-in-out;
+}
+
+@keyframes UpDown {
+  from {
+    translate: -50% calc(-50% - 10px);
+  }
+
+  to {
+    translate: -50% calc(-50% + 10px);
+  }
 }

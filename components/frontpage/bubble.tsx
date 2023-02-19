@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react";
-import BubbleText from "../bubble/bubbleText";
 import Link from "next/link";
 import { LinkIcon } from "../../types/links";
 import { BsAwardFill, BsFillPersonFill } from "react-icons/bs";
 import { IoIosPaper } from "react-icons/io";
+import BubbleTextLink from "../bubble/bubbleText";
 
 const bubbles: Array<LinkIcon & { size: number }> = [
   {
     icon: IoIosPaper,
     title: "Résumé",
     link: "/",
-    size: 1.2,
+    size: 1.1,
   },
   {
     icon: null,
-    title: "Pro",
+    title: "Projects",
     link: "/projects",
-    size: 2,
+    size: 1.3,
   },
   {
     icon: BsAwardFill,
     title: "Awards",
     link: "/awards",
-    size: 1.4,
+    size: 1.1,
   },
   {
     icon: BsFillPersonFill,
@@ -99,6 +99,8 @@ const BubbleSection = () => {
           y: centerGravity * (centerY - elem.y),
         });
 
+        // * Repel force from border
+
         // * Repel force from others
 
         positions.forEach((other, j) => {
@@ -142,15 +144,15 @@ const BubbleSection = () => {
   return (
     <section
       id="bubbleArea"
-      className="hidden md:block md:col-end-13 md:col-span-7 relative"
+      className="hidden md:block md:col-end-13 md:col-span-7 md2:col-span-8 relative"
     >
       {positions.length !== 0 &&
         bubbles.map((elem, i) => {
           return (
-            <Link href={elem.link} key={elem.link}>
-              <BubbleText
+            <Link href={elem.link} key={elem.link} passHref>
+              <BubbleTextLink
                 size={elem.size}
-                text={elem.title}
+                title={elem.title}
                 x={positions[i].x}
                 y={positions[i].y}
                 rotate={positions[i].rotate}

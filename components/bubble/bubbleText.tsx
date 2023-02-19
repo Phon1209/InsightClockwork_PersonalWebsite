@@ -1,30 +1,26 @@
-import React from "react";
+import React, { ReactFragment, useState } from "react";
 import bubbleSrc1 from "../../public/imgs/bubble1.png";
-import bubbleSrc2 from "../../public/imgs/bubble2.png";
-import bubbleSrc3 from "../../public/imgs/bubble3.png";
+import bubbleModule from "../../styles/bubble.module.scss";
 import { position } from "../frontpage/bubble";
 import { StaticImageData } from "next/image";
 
-const BubbleText = ({
-  text,
-  size,
-  x,
-  y,
-  rotate,
-}: {
-  text: string;
+interface IText {
+  title: string;
   size: number;
   x: number;
   y: number;
   rotate?: number;
-}) => {
-  const bubbleImgSrcs: Array<StaticImageData> = [
-    bubbleSrc1,
-    bubbleSrc2,
-    bubbleSrc3,
-  ];
+}
 
+interface ITextLink extends IText {
+  href?: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+}
+
+const BubbleText = ({ title, size, x, y, rotate }: IText) => {
   const rotateAngle = rotate || 0;
+
+  const [delay] = useState(Math.floor(Math.random() * 10));
 
   return (
     <div
@@ -39,18 +35,35 @@ const BubbleText = ({
         translate: "-50% -50%",
         scale: `${size}`,
         rotate: `${rotateAngle}deg`,
+        animationDelay: `${delay}s`,
       }}
-      className="text-title-lg absolute bg-contain p-6 lg:p-8 inline-flex justify-center items-center"
+      className={`${bubbleModule.bubble} text-title-lg code-text absolute bg-contain p-6 lg:p-8 inline-flex justify-center items-center`}
     >
       <h3
         style={{
           rotate: `${-rotateAngle}deg`,
         }}
       >
-        {text}
+        {title}
       </h3>
     </div>
   );
 };
 
-export default BubbleText;
+const BubbleTextLink = React.forwardRef(
+  (props: ITextLink, ref: React.Ref<HTMLAnchorElement>) => {
+    return (
+      <a href={props.href} onClick={props.onClick} ref={ref}>
+        <BubbleText
+          size={props.size}
+          title={props.title}
+          x={props.x}
+          y={props.y}
+          rotate={props.rotate}
+        />
+      </a>
+    );
+  }
+);
+
+export default BubbleTextLink;
