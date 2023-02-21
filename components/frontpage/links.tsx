@@ -27,7 +27,7 @@ const Links = () => {
     <section className="grid grid-flow-row auto-rows-max mt-16 mb-6 gap-4 md:hidden">
       {pageLinks.map((elem) => {
         return (
-          <div key={elem.title} className="flex">
+          <div key={elem.title} className="flex cursor-pointer">
             <elem.icon className="w-6 h-6" />
             <Link href={elem.link}>
               <h3 className="ml-4 text-title-md">{elem.title}</h3>

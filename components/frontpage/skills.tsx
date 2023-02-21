@@ -83,7 +83,7 @@ const Skills = () => {
         </section>
         {/* Projects */}
         <Link href="/projects">
-          <section className="flex gap-4 items-center">
+          <section className="flex gap-4 items-center cursor-pointer">
             <h3 className="text-title-lg">My Projects</h3>
             <BsChevronRight className="w-6 h-6" />
           </section>
