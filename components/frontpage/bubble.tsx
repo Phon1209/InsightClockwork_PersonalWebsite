@@ -9,7 +9,7 @@ const bubbles: Array<LinkIcon & { size: number }> = [
   {
     icon: IoIosPaper,
     title: "Résumé",
-    link: "/",
+    link: "/resume",
     size: 1.1,
   },
   {
