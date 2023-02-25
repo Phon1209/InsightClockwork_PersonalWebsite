@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Personal Website",
+    "startDate": "Jan 2023",
+    "endDate": "Present",
+    "techs": ["SiNextdotjs", "SiFramer", "SiIbmwatson"]
+  },
+  {
+    "name": "CWExpress",
+    "startDate": "May 2022",
+    "endDate": "Present",
+    "techs": ["SiReact", "SiArduino", "SiFirebase", "SiExpress"]
+  },
+  {
+    "name": "Poll Requested",
+    "startDate": "Sep 2022",
+    "endDate": "Dec 2022",
+    "techs": [
+      "SiHtml5",
+      "SiCss3",
+      "SiJquery",
+      "SiMicrosoftazure",
+      "SiPhpmyadmin"
+    ]
+  },
+  {
+    "name": "SKOI",
+    "startDate": "Dec 2018",
+    "endDate": "Feb 2019",
+    "techs": ["SiHtml5", "SiCss3", "SiJavascript", "SiPhpmyadmin"]
+  }
+]
