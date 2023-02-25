@@ -21,9 +21,7 @@ export const convertDate: (startDate: string, endDate: string) => string = (
   }
 
   // Add 1 more month
-  return `${startDate} - ${endDate} (${monthDuration(
-    end.getTime() - start.getTime()
-  )})`;
+  return `${startDate} - ${endDate} (${monthDuration(time)})`;
 };
 
 /**
