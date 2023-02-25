@@ -38,7 +38,7 @@ body {
     min-height: 100dvh;
     min-width: 100vw;
     min-width: 100dvw;
-    @apply bg-dark-black;
+    @apply bg-dark-black text-white;
     box-shadow: inset 0px 100px 190px rgba(255, 255, 255, 0.25),
       inset 0px -20px 128px #000000;
     position: relative;
