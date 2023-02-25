@@ -3,30 +3,38 @@
     "name": "Personal Website",
     "startDate": "Jan 2023",
     "endDate": "Present",
-    "techs": ["SiNextdotjs", "SiFramer", "SiIbmwatson"]
+    "link": "/",
+    "techs": ["SiNextdotjs", "SiFramer", "SiIbmwatson"],
+    "background": "linear-gradient(327.98deg, rgba(144, 224, 229, 0.5) 13.79%, rgba(15, 103, 98, 0.5) 105.96%);"
   },
   {
     "name": "CWExpress",
     "startDate": "May 2022",
     "endDate": "Present",
-    "techs": ["SiReact", "SiArduino", "SiFirebase", "SiExpress"]
+    "link": "/projects/cwexpress",
+    "techs": ["SiReact", "SiArduino", "SiFirebase", "SiExpress"],
+    "background": "linear-gradient(157.58deg, #145277 40.72%, rgba(131, 208, 203, 0.8) 118.35%);"
   },
   {
     "name": "Poll Requested",
     "startDate": "Sep 2022",
     "endDate": "Dec 2022",
+    "link": "/projects/poll_requested",
     "techs": [
       "SiHtml5",
       "SiCss3",
       "SiJquery",
       "SiMicrosoftazure",
       "SiPhpmyadmin"
-    ]
+    ],
+    "background": "linear-gradient(216.16deg, #7992B3 18.64%, #264151 84.86%);"
   },
   {
     "name": "SKOI",
     "startDate": "Dec 2018",
     "endDate": "Feb 2019",
-    "techs": ["SiHtml5", "SiCss3", "SiJavascript", "SiPhpmyadmin"]
+    "link": "/projects/skoi",
+    "techs": ["SiHtml5", "SiCss3", "SiJavascript", "SiPhpmyadmin"],
+    "background": "linear-gradient(327.98deg, rgba(205, 155, 235, 0.5) 13.79%, rgba(110, 191, 245, 0.5) 105.96%);"
   }
 ]
