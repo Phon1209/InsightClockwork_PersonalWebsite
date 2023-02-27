@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { LinkIcon } from "../../types/links";
 import { BsAwardFill, BsFillPersonFill } from "react-icons/bs";
@@ -59,6 +59,11 @@ const addForce = (o: position, f: position): void => {
 const BubbleSection = () => {
   const [positions, setPositions] = useState<position[]>([]);
 
+  const bubbleRefs = useRef([]);
+  bubbleRefs.current = bubbles.map(
+    (ref, idx) => (bubbleRefs.current[idx] = React.createRef())
+  );
+
   useEffect(() => {
     const area = document.querySelector<HTMLElement>("#bubbleArea");
     const rearrangeBubble = () => {
@@ -88,7 +93,18 @@ const BubbleSection = () => {
       const centerY = area.offsetHeight / 2;
       const centerX = area.offsetWidth / 2;
       // Calculate bubble here
-      const newPositions: position[] = positions.map((elem, i) => {
+
+      const currentPostion: Array<position> = bubbleRefs.current.map(
+        (bubbleRef) => {
+          return {
+            x: parseInt(bubbleRef.current.style.left.slice(0, -2)),
+            y: parseInt(bubbleRef.current.style.top.slice(0, -2)),
+            rotate: parseInt(bubbleRef.current.style.left.slice(0, -2)),
+          };
+        }
+      );
+
+      const newPositions: position[] = currentPostion.map((elem, i) => {
         const nextPosition: position = { ...elem };
         const forces: position = { x: 0, y: 0 };
         // * Gravity to center
@@ -103,7 +119,7 @@ const BubbleSection = () => {
 
         // * Repel force from others
 
-        positions.forEach((other, j) => {
+        currentPostion.forEach((other, j) => {
           if (j == i) return;
           const repelConstant =
             (5500 / Math.sqrt(distanceR2(elem, other))) * bubbles[j].size;
@@ -135,7 +151,13 @@ const BubbleSection = () => {
         return nextPosition;
       });
 
-      setPositions(newPositions);
+      // console.log(newPositions);
+
+      bubbleRefs.current.forEach((bubbleRef, i) => {
+        bubbleRef.current.style.top = `${newPositions[i].y}px`;
+        bubbleRef.current.style.left = `${newPositions[i].x}px`;
+      });
+      // setPositions(newPositions);
     }, 200);
 
     return () => clearInterval(calculatePosition);
@@ -151,6 +173,7 @@ const BubbleSection = () => {
           return (
             <Link href={elem.link} key={elem.link} passHref>
               <BubbleTextLink
+                ref={bubbleRefs.current[i]}
                 size={elem.size}
                 title={elem.title}
                 x={positions[i].x}
