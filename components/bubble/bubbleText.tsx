@@ -17,44 +17,49 @@ interface ITextLink extends IText {
   onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
-const BubbleText = ({ title, size, x, y, rotate }: IText) => {
-  const rotateAngle = rotate || 0;
+const BubbleText = React.forwardRef(
+  ({ title, size, x, y, rotate }: IText, ref: React.Ref<HTMLDivElement>) => {
+    const rotateAngle = rotate || 0;
 
-  const [delay] = useState(Math.floor(Math.random() * 10));
+    console.count("render");
+    const [delay] = useState(Math.floor(Math.random() * 10));
 
-  return (
-    <div
-      style={{
-        backgroundImage: `url(${bubbleSrc1.src})`,
-        aspectRatio: "1/1",
-        transitionProperty: "top left",
-        transitionDuration: "1000ms",
-        transitionTimingFunction: "ease",
-        top: y,
-        left: x,
-        translate: "-50% -50%",
-        scale: `${size}`,
-        rotate: `${rotateAngle}deg`,
-        animationDelay: `${delay}s`,
-      }}
-      className={`${bubbleModule.bubble} text-title-lg code-text absolute bg-contain p-6 lg:p-8 inline-flex justify-center items-center`}
-    >
-      <h3
+    return (
+      <div
+        ref={ref}
         style={{
-          rotate: `${-rotateAngle}deg`,
+          backgroundImage: `url(${bubbleSrc1.src})`,
+          aspectRatio: "1/1",
+          transitionProperty: "top left",
+          transitionDuration: "1000ms",
+          transitionTimingFunction: "ease",
+          top: y,
+          left: x,
+          translate: "-50% -50%",
+          scale: `${size}`,
+          rotate: `${rotateAngle}deg`,
+          animationDelay: `${delay}s`,
         }}
+        className={`${bubbleModule.bubble} text-title-lg code-text absolute bg-contain p-6 lg:p-8 inline-flex justify-center items-center`}
       >
-        {title}
-      </h3>
-    </div>
-  );
-};
+        <h3
+          style={{
+            rotate: `${-rotateAngle}deg`,
+          }}
+        >
+          {title}
+        </h3>
+      </div>
+    );
+  }
+);
 
 const BubbleTextLink = React.forwardRef(
-  (props: ITextLink, ref: React.Ref<HTMLAnchorElement>) => {
+  (props: ITextLink, ref: React.Ref<HTMLDivElement>) => {
     return (
-      <a href={props.href} onClick={props.onClick} ref={ref}>
+      <a href={props.href} onClick={props.onClick}>
         <BubbleText
+          ref={ref}
           size={props.size}
           title={props.title}
           x={props.x}
