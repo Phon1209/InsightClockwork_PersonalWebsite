@@ -35,3 +35,18 @@ const monthDuration: (time: number) => string = (time) => {
     units: ["y", "mo"],
   });
 };
+
+/**
+ *
+ * @param x first comparator date
+ * @param y second comparator date
+ * @param invert boolean indicator of ascending(false) or descending(true)
+ * @returns value for sorting
+ */
+export const sortDate: (x: Date, y: Date, invert?: boolean) => number = (
+  x,
+  y,
+  invert = false
+) => {
+  return (x.getTime() - y.getTime()) * (invert ? -1 : 1);
+};
