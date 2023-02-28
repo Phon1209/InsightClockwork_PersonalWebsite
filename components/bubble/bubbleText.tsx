@@ -21,7 +21,6 @@ const BubbleText = React.forwardRef(
   ({ title, size, x, y, rotate }: IText, ref: React.Ref<HTMLDivElement>) => {
     const rotateAngle = rotate || 0;
 
-    console.count("render");
     const [delay] = useState(Math.floor(Math.random() * 10));
 
     return (
