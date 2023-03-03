@@ -19,6 +19,7 @@ import {
   SiPhpmyadmin,
   SiJavascript,
 } from "react-icons/si";
+import Image from "next/image";
 
 const icons = {
   SiNextdotjs,
@@ -46,7 +47,7 @@ const Projects: FC = () => {
       <Head>
         <title>Projects | Patiphon Loetsuthakun</title>
       </Head>
-      <section className="fullpage-item px-4 md:px-12 py-8 md:py-16 flex flex-col items-center">
+      <section className="fullpage-item fullpage-item--scrollable px-4 md:px-12 py-8 md:py-16 flex flex-col items-center">
         <Link href="/">
           <header className="flex items-center mb-8 md:mb-16 cursor-pointer self-start">
             <MdChevronLeft className="w-8 h-8" />
@@ -55,7 +56,7 @@ const Projects: FC = () => {
             </h2>
           </header>
         </Link>
-        <div className="grid grid-flow-row mx-auto md:grid-flow-col items-center auto-cols-max gap-8 md:gap-16">
+        <div className="grid grid-flow-row mx-auto lg:grid-cols-2 2xl:grid-cols-3 items-center auto-cols-max gap-8 md:gap-16">
           {sortedProjects.map((project) => {
             return (
               <Link key={project.name} href={project.link}>
@@ -63,24 +64,36 @@ const Projects: FC = () => {
                   style={{
                     background: project.background,
                   }}
-                  className="flex flex-col gap-6 items-center w-fit h-[210px] p-2 min-w-[240px] rounded-[30px] bg-black justify-center cursor-pointer"
+                  className={`flex items-center justify-center w-fit h-[210px] p-2 min-w-[240px] rounded-[30px] cursor-pointer 
+                   bg-transparent hide-first-child md:show-first-child
+                  md:bg-black md:bg-opacity-20 md:w-[460px] md:h-[240px]`}
                 >
-                  <header className="flex flex-col gap-2 items-center">
-                    <h4 className="!font-semibold text-headline-md">
-                      {project.name}
-                    </h4>
-                    <p className="text-title-sm">
-                      {convertDate(project.startDate, project.endDate)}
-                    </p>
-                  </header>
-                  <summary className="list-none flex gap-4">
-                    {project.techs.map((iconName) => {
-                      const IconComponent = icons[iconName];
-                      return (
-                        <IconComponent key={iconName} className="w-6 h-6" />
-                      );
-                    })}
-                  </summary>
+                  <Image
+                    className="!hidden md:!block"
+                    objectFit="cover"
+                    alt={project.illustration}
+                    width={200}
+                    height={200}
+                    src={`/imgs/Illustration/${project.illustration}.svg`}
+                  ></Image>
+                  <div className="flex flex-col gap-6 items-center justify-center p-2 w-fit">
+                    <header className="flex flex-col gap-2 items-center whitespace-nowrap">
+                      <h4 className="!font-semibold text-headline-md">
+                        {project.name}
+                      </h4>
+                      <p className="text-title-sm">
+                        {convertDate(project.startDate, project.endDate)}
+                      </p>
+                    </header>
+                    <summary className="list-none flex gap-4">
+                      {project.techs.map((iconName) => {
+                        const IconComponent = icons[iconName];
+                        return (
+                          <IconComponent key={iconName} className="w-6 h-6" />
+                        );
+                      })}
+                    </summary>
+                  </div>
                 </article>
               </Link>
             );

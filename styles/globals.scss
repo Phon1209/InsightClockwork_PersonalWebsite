@@ -17,6 +17,14 @@ body {
 }
 
 @layer utilities {
+  .hide-first-child > *:first-child {
+    display: none !important;
+  }
+
+  .show-first-child > *:first-child {
+    display: block !important;
+  }
+
   // Button and Chips
 
   .button {
@@ -47,6 +55,10 @@ body {
       height: 100vh;
       height: 100dvh;
       @apply overflow-y-auto md:overflow-y-hidden;
+
+      &--scrollable {
+        @apply overflow-y-auto;
+      }
     }
   }
 
