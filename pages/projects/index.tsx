@@ -60,16 +60,8 @@ const Projects: FC = () => {
           {sortedProjects.map((project) => {
             return (
               <Link key={project.name} href={project.link}>
-                <article
-                  style={{
-                    background: project.background,
-                  }}
-                  className={`flex items-center justify-center w-fit h-[210px] p-2 min-w-[240px] rounded-[30px] cursor-pointer 
-                   bg-transparent hide-first-child md:show-first-child
-                  md:bg-black md:bg-opacity-20 md:w-[460px] md:h-[240px]`}
-                >
+                <article className="project-card hide-first-child md:show-first-child">
                   <Image
-                    className="!hidden md:!block"
                     objectFit="cover"
                     alt={project.illustration}
                     width={200}
@@ -94,6 +86,12 @@ const Projects: FC = () => {
                       })}
                     </summary>
                   </div>
+                  <div
+                    style={{
+                      background: project.background,
+                    }}
+                    className="card-background md:hidden"
+                  ></div>
                 </article>
               </Link>
             );
