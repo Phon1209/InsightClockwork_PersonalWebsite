@@ -1,8 +1,6 @@
-import React, { ReactFragment, useState } from "react";
+import React, { useState } from "react";
 import bubbleSrc1 from "../../public/imgs/bubble1.png";
 import bubbleModule from "../../styles/bubble.module.scss";
-import { position } from "../frontpage/bubble";
-import { StaticImageData } from "next/image";
 
 interface IText {
   title: string;

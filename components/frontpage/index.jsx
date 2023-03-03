@@ -41,7 +41,7 @@ const IconButton = React.forwardRef((props, ref) => {
 const Frontpage = () => {
   return (
     <>
-      <div className="py-12 px-8 text-white flex flex-col min-h-full md:grid md:grid-cols-12">
+      <div className="py-12 px-8 text-white flex flex-col min-h-full md:grid md:grid-cols-12 overflow-x-hidden">
         <section className="md:col-span-5 md2:col-span-4 md:col-start-1 md:flex md:flex-col md:items-start md:my-auto lg:ml-8">
           <h1 className="text-display-md lg:text-display-lg">
             Patiphon Loetsuthakun
