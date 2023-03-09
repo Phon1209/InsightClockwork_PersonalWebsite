@@ -35,7 +35,7 @@ const BubbleText = React.forwardRef(
           translate: "-50% -50%",
           scale: `${size}`,
           rotate: `${rotateAngle}deg`,
-          animationDelay: `${delay}s`,
+          animationDelay: `-${delay}s`,
         }}
         className={`${bubbleModule.bubble} text-title-lg code-text absolute bg-contain p-6 lg:p-8 inline-flex justify-center items-center`}
       >
