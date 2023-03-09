@@ -1,12 +1,10 @@
-import React, { MouseEventHandler } from "react";
+import React from "react";
 import Link from "next/link";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
-import { LinkIcon } from "../../types/links";
 import Skills from "./skills";
 import Links from "./links";
 import BubbleSection from "./bubble";
-import { IconType } from "react-icons/lib";
 
 const contactLists = [
   {
