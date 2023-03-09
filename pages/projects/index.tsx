@@ -18,6 +18,7 @@ import {
   SiMicrosoftazure,
   SiPhpmyadmin,
   SiJavascript,
+  SiLaravel,
 } from "react-icons/si";
 import Image from "next/image";
 
@@ -35,6 +36,7 @@ const icons = {
   SiMicrosoftazure,
   SiPhpmyadmin,
   SiJavascript,
+  SiLaravel,
 };
 
 const Projects: FC = () => {

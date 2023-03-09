@@ -15,7 +15,7 @@
     "link": "/projects/cwexpress",
     "techs": ["SiReact", "SiArduino", "SiFirebase", "SiExpress"],
     "background": "linear-gradient(157.58deg, #145277 40.72%, rgba(131, 208, 203, 0.8) 118.35%)",
-    "illustration": "personal_website"
+    "illustration": "cwexpress"
   },
   {
     "name": "Poll Requested",
@@ -33,12 +33,21 @@
     "illustration": "poll_requested"
   },
   {
-    "name": "SKOI",
+    "name": "SKOI19",
     "startDate": "Dec 2018",
     "endDate": "Feb 2019",
-    "link": "/projects/skoi",
+    "link": "https://github.com/PongDev/SKCC-SKOI19-Register",
     "techs": ["SiHtml5", "SiCss3", "SiJavascript", "SiPhpmyadmin"],
     "background": "linear-gradient(327.98deg, rgba(205, 155, 235, 0.5) 13.79%, rgba(110, 191, 245, 0.5) 105.96%)",
     "illustration": "personal_website"
+  },
+  {
+    "name": "SK Printer Room",
+    "startDate": "Dec 2019",
+    "endDate": "May 2020",
+    "link": "https://github.com/PongDev/SK-Printer-Room-System",
+    "techs": ["SiHtml5", "SiCss3", "SiJavascript", "SiLaravel"],
+    "background": "linear-gradient(327.98deg, rgba(205, 155, 235, 0.5) 13.79%, rgba(110, 191, 245, 0.5) 105.96%)",
+    "illustration": "cwexpress"
   }
 ]
