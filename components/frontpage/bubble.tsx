@@ -97,9 +97,9 @@ const BubbleSection = () => {
       const currentPostion: Array<position> = bubbleRefs.current.map(
         (bubbleRef) => {
           return {
-            x: parseInt(bubbleRef.current.style.left.slice(0, -2)),
-            y: parseInt(bubbleRef.current.style.top.slice(0, -2)),
-            rotate: parseInt(bubbleRef.current.style.left.slice(0, -2)),
+            x: parseInt(bubbleRef.current.style.left.slice(0, -2)) || 0,
+            y: parseInt(bubbleRef.current.style.top.slice(0, -2)) || 0,
+            rotate: parseInt(bubbleRef.current.style.left.slice(0, -2)) || 0,
           };
         }
       );
