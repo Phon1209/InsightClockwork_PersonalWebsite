@@ -164,6 +164,48 @@ body {
         letter-spacing: 1px;
       }
     }
+
+    &-label {
+      &-lg {
+        @apply font-medium;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+      }
+      &-md {
+        @apply font-medium;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.5px;
+      }
+      &-sm {
+        @apply font-medium;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    &-body {
+      &-lg {
+        @apply font-normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+      }
+      &-md {
+        @apply font-normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+      }
+      &-sm {
+        @apply font-normal;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.4px;
+      }
+    }
   }
 
   .text-code {
