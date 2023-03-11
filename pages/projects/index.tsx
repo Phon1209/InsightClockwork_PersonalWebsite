@@ -53,7 +53,7 @@ const Projects: FC = () => {
         <Link href="/">
           <header className="flex items-center mb-8 md:mb-16 cursor-pointer self-start">
             <MdChevronLeft className="w-8 h-8" />
-            <h2 className="text-title-lg md:text-display-sm code-text">
+            <h2 className="text-title-lg md:text-display-sm text-code">
               Project
             </h2>
           </header>

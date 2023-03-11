@@ -37,7 +37,7 @@ const BubbleText = React.forwardRef(
           rotate: `${rotateAngle}deg`,
           animationDelay: `-${delay}s`,
         }}
-        className={`${bubbleModule.bubble} text-title-lg code-text absolute bg-contain p-6 lg:p-8 inline-flex justify-center items-center`}
+        className={`${bubbleModule.bubble} text-title-lg text-code absolute bg-contain p-6 lg:p-8 inline-flex justify-center items-center`}
       >
         <h3
           style={{
