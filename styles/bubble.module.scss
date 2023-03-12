@@ -11,3 +11,17 @@
     translate: -50% calc(-50% + 10px);
   }
 }
+
+.bubble_pic {
+  animation: Updown2 5s alternate -2.5s infinite ease-in-out;
+}
+
+@keyframes Updown2 {
+  from {
+    translate: 0 -10px;
+  }
+
+  to {
+    translate: 0 10px;
+  }
+}
