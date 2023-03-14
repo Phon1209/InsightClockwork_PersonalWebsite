@@ -58,14 +58,12 @@ const Frontpage = () => {
           <h2 className="text-headline-sm my-2">Full-Stack Developer</h2>
           <ul>
             {contactLists.map((elem, i) => {
-              return (
-                <IconButtonLink
-                  href={elem.link}
-                  icon={elem.icon}
-                  i={i}
-                  key={elem.title}
-                />
-              );
+              const prop = {
+                href: elem.link,
+                icon: elem.icon,
+                i,
+              };
+              return <IconButtonLink {...prop} key={elem.title} />;
             })}
           </ul>
         </section>
