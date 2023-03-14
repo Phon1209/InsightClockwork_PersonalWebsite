@@ -50,6 +50,7 @@ const BubbleText = React.forwardRef(
     );
   }
 );
+BubbleText.displayName = "BubbleText";
 
 const BubbleTextLink = React.forwardRef(
   (props: ITextLink, ref: React.Ref<HTMLDivElement>) => {
@@ -68,4 +69,7 @@ const BubbleTextLink = React.forwardRef(
   }
 );
 
+BubbleTextLink.displayName = "BubbleTextlink";
+
+export { BubbleText };
 export default BubbleTextLink;

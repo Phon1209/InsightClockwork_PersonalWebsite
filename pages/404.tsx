@@ -11,7 +11,7 @@ const Custom404 = () => {
       </Head>
       <section className="fullpage-item flex flex-col justify-center items-center">
         <h1 className="text-display-lg text-white mb-12">
-          404 | This page doesn't exist
+          404 | This page doesn&apos;t exist
         </h1>
         <Link href="/">
           <div className=" text-black py-4 px-6 bg-white rounded-md flex gap-4 items-center cursor-pointer">

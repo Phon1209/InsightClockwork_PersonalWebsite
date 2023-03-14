@@ -32,6 +32,7 @@ const About = () => {
           </div>
           <div className="lg:mx-20 xl:grow xl:mx-0 flex gap-12 justify-evenly items-center scale-[0.8] md:scale-100">
             <Image
+              alt="Profile Picture"
               objectFit="contain"
               width={240}
               height={240}
@@ -60,6 +61,7 @@ const About = () => {
                 className={`${bubbleStyle.bubble_pic} grow basis-0 flex justify-center items-center`}
               >
                 <Image
+                  alt="Goal_picture"
                   objectFit="contain"
                   height={200}
                   width={200}
@@ -78,6 +80,7 @@ const About = () => {
                 className={`${bubbleStyle.bubble_pic} grow basis-0 hidden md:flex justify-center items-center`}
               >
                 <Image
+                  alt="Goal_picture_2"
                   objectFit="contain"
                   width={200}
                   height={200}
@@ -90,8 +93,8 @@ const About = () => {
         <article className="p-6 px-8 flex flex-col gap-12">
           <header className="text-headline-lg self-center">Hobbies</header>
           <summary className="list-none grid grid-flow-row gap-6">
-            {aboutData.hobby.map((msg) => {
-              return <p>{msg}</p>;
+            {aboutData.hobby.map((msg, i) => {
+              return <p key={i}>{msg}</p>;
             })}
           </summary>
         </article>

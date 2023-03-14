@@ -1,10 +1,11 @@
-import React from "react";
-import Link from "next/link";
+import React, { FC } from "react";
+import Link, { LinkProps } from "next/link";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import Skills from "./skills";
 import Links from "./links";
 import BubbleSection from "./bubble";
+import { IconType } from "react-icons/lib";
 
 const contactLists = [
   {
@@ -24,17 +25,27 @@ const contactLists = [
   },
 ];
 
-const IconButton = React.forwardRef((props, ref) => {
-  return (
-    <a href={props.href} onClick={props.onClick} ref={ref}>
-      <props.icon
-        className={`inline box-content w-6 h-6 ${
-          props.i != 0 ? "mx-2" : "mr-2"
-        }`}
-      ></props.icon>
-    </a>
-  );
-});
+interface ILinkButton {
+  icon: IconType;
+  i: number;
+}
+
+const IconButtonLink: FC = React.forwardRef(
+  (props: ILinkButton & LinkProps, ref: React.Ref<HTMLAnchorElement>) => {
+    return (
+      <Link href={props.href}>
+        <a href={props.href as string} onClick={props.onClick} ref={ref}>
+          <props.icon
+            className={`inline box-content w-6 h-6 ${
+              props.i != 0 ? "mx-2" : "mr-2"
+            }`}
+          ></props.icon>
+        </a>
+      </Link>
+    );
+  }
+);
+IconButtonLink.displayName = "IconButtonLink";
 
 const Frontpage = () => {
   return (
@@ -45,12 +56,15 @@ const Frontpage = () => {
             Patiphon Loetsuthakun
           </h1>
           <h2 className="text-headline-sm my-2">Full-Stack Developer</h2>
-          <ul className="">
+          <ul>
             {contactLists.map((elem, i) => {
               return (
-                <Link key={elem.link} href={elem.link} passHref>
-                  <IconButton icon={elem.icon} i={i} />
-                </Link>
+                <IconButtonLink
+                  href={elem.link}
+                  icon={elem.icon}
+                  i={i}
+                  key={elem.title}
+                />
               );
             })}
           </ul>

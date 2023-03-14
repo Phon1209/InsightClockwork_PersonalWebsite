@@ -21,28 +21,7 @@ const About = () => {
             </h2>
           </header>
         </Link>
-        <article className="flex p-6 px-8 flex-col-reverse gap-8 md:gap-12 md:flex-row md:px-20">
-          <div className="flex flex-col flex-1 self-center">
-            <header className="hidden md:block !font-semibold text-display-sm text-code mb-4">
-              Me?
-            </header>
-            <summary className="list-none text-title-lg tracking-wide">
-              {aboutData.intro}
-            </summary>
-          </div>
-          <div className="lg:mx-20 xl:grow xl:mx-0 flex gap-12 justify-evenly items-center scale-[0.8] md:scale-100">
-            <Image
-              objectFit="contain"
-              width={240}
-              height={240}
-              priority
-              src={`/imgs/bubble_profile.png`}
-            />
-            <header className="md:hidden !font-semibold text-display-lg text-code">
-              Me?
-            </header>
-          </div>
-        </article>
+        <article className="flex p-6 px-8 flex-col-reverse gap-8 md:gap-12 md:flex-row md:px-20"></article>
       </section>
     </>
   );
