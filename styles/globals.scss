@@ -18,6 +18,10 @@ body {
   display: none;
 }
 
+summary {
+  list-style: none;
+}
+
 @layer utilities {
   // Project cards
 
