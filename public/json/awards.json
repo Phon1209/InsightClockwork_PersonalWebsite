@@ -1,0 +1,93 @@
+[
+  {
+    "school": "Rensselaer Polytechnic Institute",
+    "logo": "/imgs/rpi_logo.png",
+    "degree": "Bachelor's degree, Computer Science",
+    "years": "2021 - 2025",
+    "desc": "received the Olympiad Scholarship from the Thai government to study computer science in the USA up to doctoral degree.",
+    "sections": [
+      {
+        "icon": "MdSportsScore",
+        "title": "Activities",
+        "lists": [
+          {
+            "bold": "",
+            "description": "Table Tennis Club"
+          }
+        ]
+      },
+      {
+        "icon": "BsAwardFill",
+        "title": "Awards",
+        "lists": [
+          {
+            "bold": "",
+            "description": "6th Place, RPI ICPC NAQ (ICPC NENA Qualification)"
+          },
+          {
+            "bold": "",
+            "description": "Dean’s Honor List (Fall 2021, Spring 2022, Fall 2022)"
+          }
+        ]
+      },
+      {
+        "icon": "MdCollectionsBookmark",
+        "title": "Notable Coursework",
+        "lists": [
+          {
+            "bold": "IHSS 1180 - ",
+            "description": "The Art of Listening"
+          },
+          {
+            "bold": "PHIL 2140 - ",
+            "description": "Introduction to Logic"
+          },
+          {
+            "bold": "PSYC 1200 - ",
+            "description": "Introduction to Psychological Science"
+          },
+          {
+            "bold": "CSCI 2500 - ",
+            "description": "Computer Organization"
+          },
+          {
+            "bold": "CSCI 2300 - ",
+            "description": "Introduction to Algorithms"
+          },
+          {
+            "bold": "CSCI 4210 - ",
+            "description": "Operating System"
+          },
+          {
+            "bold": "CSCI 4020 - ",
+            "description": "Design and Analysis of Algorithm"
+          },
+          {
+            "bold": "CSCI 4260 - ",
+            "description": "Graph Theory"
+          },
+          {
+            "bold": "ITWS 1100 - ",
+            "description": "Introduction to IT and Web Science"
+          },
+          {
+            "bold": "ITWS 4370 - ",
+            "description": "Information System Security"
+          },
+          {
+            "bold": "ECSE 1090 - ",
+            "description": "Mechatronics Hardware/ Software"
+          },
+          {
+            "bold": "MATH 2010 - ",
+            "description": "Multivariable Calculus and Matrix Algebra"
+          },
+          {
+            "bold": "MATH 2400 - ",
+            "description": "Introduction to Differential Equation"
+          }
+        ]
+      }
+    ]
+  }
+]
