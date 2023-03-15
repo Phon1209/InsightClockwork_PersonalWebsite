@@ -37,7 +37,10 @@ const About = () => {
 
         {awardData.map((schoolData) => {
           return (
-            <section className="flex flex-col gap-11 justify-start md:flex-row md:gap-16 max-w-3xl self-center">
+            <section
+              key={schoolData.school}
+              className="flex flex-col gap-11 justify-start md:flex-row md:gap-16 max-w-3xl self-center"
+            >
               <div className="w-24 h-24 shrink-0 self-center md:self-start">
                 <Image
                   width={96}
@@ -65,7 +68,10 @@ const About = () => {
                   const Icon = IconsElement[sectionData.icon];
 
                   return (
-                    <section className="grid grid-flow-row gap-2">
+                    <section
+                      key={sectionData.title}
+                      className="grid grid-flow-row gap-2"
+                    >
                       <header className="flex gap-3 items-center">
                         <Icon className="w-6 h-6" />
                         <h6 className="text-title-md !font-bold">
@@ -73,9 +79,9 @@ const About = () => {
                         </h6>
                       </header>
                       <summary>
-                        {sectionData.lists.map((item) => {
+                        {sectionData.lists.map((item, i) => {
                           return (
-                            <li>
+                            <li key={i}>
                               <span className="text-code">{item.bold}</span>
                               {item.description}
                             </li>
