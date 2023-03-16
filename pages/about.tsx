@@ -13,14 +13,15 @@ const About = () => {
         <title>About | Patiphon Loetsuthakun</title>
       </Head>
       <section className="fullpage-item fullpage-item--scrollable scrollbar-hide px-8 md:px-12 py-8 md:py-16 flex flex-col gap-12 text-[20px] leading-[44px] lg:pb-24 2xl:px-48">
-        <Link href="/">
-          <header className="flex items-center md:mb-4 cursor-pointer self-start">
-            <MdChevronLeft className="w-8 h-8" />
-            <h2 className="text-title-lg md:text-display-sm text-code">
-              About
-            </h2>
-          </header>
-        </Link>
+        <header className="flex flex-col items-center justify-items-stretch gap-4 text-code">
+          <h2 className="text-display-sm">About</h2>
+          <Link href="/">
+            <div className="text-xl text-teal-200 flex gap-4 items-center self-start">
+              <MdChevronLeft className="w-6 h-6" />
+              Back to Main
+            </div>
+          </Link>
+        </header>
         <article className="flex p-6 px-8 flex-col-reverse gap-8 md:gap-12 md:flex-row md:px-20">
           <div className="flex flex-col flex-1 self-center">
             <header className="hidden md:block !font-semibold text-display-sm text-code mb-4">
