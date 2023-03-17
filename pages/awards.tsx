@@ -24,11 +24,9 @@ const About = () => {
       </Head>
       <section className="fullpage-item fullpage-item--scrollable scrollbar-hide px-8 md:px-12 py-8 md:py-16 flex flex-col gap-12 text-[20px] leading-[44px] lg:pb-24 2xl:px-48">
         <header className="flex flex-col items-center justify-items-stretch gap-4 text-code">
-          <h2 className="text-title-lg md:text-display-sm">
-            Awards and Academics
-          </h2>
+          <h2 className="text-display-sm">Awards and Academics</h2>
           <Link href="/">
-            <div className="text-xl text-teal-200 flex gap-4 items-center self-start">
+            <div className="cursor-pointer text-xl text-teal-200 flex gap-4 items-center self-start">
               <MdChevronLeft className="w-6 h-6" />
               Back to Main
             </div>

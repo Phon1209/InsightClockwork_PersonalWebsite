@@ -9,15 +9,6 @@ body {
   font-style: normal;
 }
 
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
 summary {
   list-style: none;
 }
@@ -77,6 +68,10 @@ summary {
       inset 0px -20px 128px #000000;
     position: relative;
 
+    &:has(> .fullpage-item--scrollable) {
+      min-height: auto;
+    }
+
     > .fullpage-item {
       height: 100vh;
       height: 100dvh;
@@ -84,6 +79,7 @@ summary {
 
       &--scrollable {
         @apply overflow-y-auto;
+        height: auto;
       }
     }
   }

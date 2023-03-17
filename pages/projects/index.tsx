@@ -50,14 +50,15 @@ const Projects: FC = () => {
         <title>Projects | Patiphon Loetsuthakun</title>
       </Head>
       <section className="fullpage-item fullpage-item--scrollable px-4 md:px-12 py-8 md:py-16 flex flex-col items-center">
-        <Link href="/">
-          <header className="flex items-center mb-8 md:mb-16 cursor-pointer self-start">
-            <MdChevronLeft className="w-8 h-8" />
-            <h2 className="text-title-lg md:text-display-sm text-code">
-              Project
-            </h2>
-          </header>
-        </Link>
+        <header className="self-stretch flex flex-col items-center justify-items-stretch gap-4 text-code mb-8 md:mb-16">
+          <h2 className="text-display-sm">Projects</h2>
+          <Link href="/">
+            <div className="cursor-pointer text-xl text-teal-200 flex gap-4 items-center self-start">
+              <MdChevronLeft className="w-6 h-6" />
+              Back to Main
+            </div>
+          </Link>
+        </header>
         <div className="grid grid-flow-row mx-auto lg:grid-cols-2 2xl:grid-cols-3 items-center auto-cols-max gap-8 md:gap-16">
           {sortedProjects.map((project) => {
             return (

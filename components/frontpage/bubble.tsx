@@ -155,8 +155,10 @@ const BubbleSection = () => {
       // console.log(newPositions);
 
       bubbleRefs.current.forEach((bubbleRef, i) => {
-        bubbleRef.current.style.top = `${newPositions[i].y}px`;
-        bubbleRef.current.style.left = `${newPositions[i].x}px`;
+        if (bubbleRef.current) {
+          bubbleRef.current.style.top = `${newPositions[i].y}px`;
+          bubbleRef.current.style.left = `${newPositions[i].x}px`;
+        }
       });
       // setPositions(newPositions);
     }, 200);
