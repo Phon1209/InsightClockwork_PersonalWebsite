@@ -69,7 +69,7 @@ summary {
     position: relative;
 
     &:has(> .fullpage-item--scrollable) {
-      min-height: 100vh;
+      min-height: auto;
     }
 
     > .fullpage-item {
@@ -79,7 +79,7 @@ summary {
 
       &--scrollable {
         @apply overflow-y-auto;
-        // height: initial;
+        height: auto;
       }
     }
   }
