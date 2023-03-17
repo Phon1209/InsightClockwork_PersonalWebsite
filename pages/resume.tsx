@@ -27,7 +27,7 @@ const Resume: FC = () => {
         <header className="flex flex-col items-center md:items-start gap-4 text-code mb-10">
           <h2 className="text-display-sm">Résumé</h2>
           <Link href="/">
-            <div className="text-xl text-teal-200 flex gap-4 items-center self-start">
+            <div className="cursor-pointer text-xl text-teal-200 flex gap-4 items-center self-start">
               <MdChevronLeft className="w-6 h-6" />
               Back to Main
             </div>

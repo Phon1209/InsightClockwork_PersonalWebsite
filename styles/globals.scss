@@ -68,6 +68,10 @@ summary {
       inset 0px -20px 128px #000000;
     position: relative;
 
+    &:has(> .fullpage-item--scrollable) {
+      min-height: 100vh;
+    }
+
     > .fullpage-item {
       height: 100vh;
       height: 100dvh;
