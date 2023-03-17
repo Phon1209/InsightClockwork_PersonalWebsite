@@ -69,9 +69,9 @@ summary {
   // Container
   .fullpage-container {
     min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 100svh;
     min-width: 100vw;
-    min-width: 100dvw;
+    min-width: 100svw;
     @apply bg-dark-black text-white;
     box-shadow: inset 0px 100px 190px rgba(255, 255, 255, 0.25),
       inset 0px -20px 128px #000000;
@@ -79,7 +79,7 @@ summary {
 
     > .fullpage-item {
       height: 100vh;
-      height: 100dvh;
+      height: 100svh;
       @apply overflow-y-auto md:overflow-y-hidden;
 
       &--scrollable {
