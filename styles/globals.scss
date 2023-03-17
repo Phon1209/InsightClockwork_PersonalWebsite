@@ -9,15 +9,6 @@ body {
   font-style: normal;
 }
 
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
 summary {
   list-style: none;
 }
@@ -69,9 +60,9 @@ summary {
   // Container
   .fullpage-container {
     min-height: 100vh;
-    min-height: 100svh;
+    min-height: 100dvh;
     min-width: 100vw;
-    min-width: 100svw;
+    min-width: 100dvw;
     @apply bg-dark-black text-white;
     box-shadow: inset 0px 100px 190px rgba(255, 255, 255, 0.25),
       inset 0px -20px 128px #000000;
@@ -79,11 +70,12 @@ summary {
 
     > .fullpage-item {
       height: 100vh;
-      height: 100svh;
+      height: 100dvh;
       @apply overflow-y-auto md:overflow-y-hidden;
 
       &--scrollable {
         @apply overflow-y-auto;
+        // height: initial;
       }
     }
   }
